@@ -1,4 +1,10 @@
-<!-- track = track the value that we want to track -->
-@for (item of todoItems(); track item.id) {
-  <p>{{ item.title }}</p>
-}
+<h3>Todo list</h3>
+
+<ul>
+  @for (item of todoItems(); track item.id){
+    <li class="todos__item">
+      <input id="todo-{{item.id}}" type="checkbox" [value]="item.completed" />
+      <label>{{item.title}}</label>
+    </li>
+  }
+</ul>

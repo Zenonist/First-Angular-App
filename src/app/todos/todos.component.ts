@@ -1,6 +1,7 @@
 import { Component, inject, OnInit, signal } from '@angular/core';
 import { TodosService } from '../services/todos.service';
 import { Todo } from '../model/todo.type';
+import { catchError } from 'rxjs';
 
 @Component({
   selector: 'app-todos',
@@ -15,7 +16,14 @@ export class TodosComponent implements OnInit{
 
   // Allow to run function when the component is initialized
   ngOnInit(): void {
-    console.log(this.todoService.todoItems)
-    this.todoItems.set(this.todoService.todoItems);
+    this.todoService.getTodosFromAPI().pipe(
+      catchError((error) => {
+        console.error('Error:', error);
+        throw error;
+      })
+    ).subscribe((todos) => {
+      this.todoItems.set(todos);
+
+    });
   }
 }
