@@ -1,1 +1,4 @@
-<p>todos works!</p>
+<!-- track = track the value that we want to track -->
+@for (item of todoItems(); track item.id) {
+  <p>{{ item.title }}</p>
+}
