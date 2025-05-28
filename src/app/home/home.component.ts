@@ -1,3 +1,10 @@
+// home.component.ts
+//
+// This is the TypeScript file for the HomeComponent.
+// It contains the component logic, including:
+// - A signal for the greeting message
+// - A method to handle keyup events from an input field
+
 import { Component, signal } from '@angular/core';
 import { GreetingComponent } from '../components/greeting/greeting.component';
 import { CounterComponent } from '../components/counter/counter.component';

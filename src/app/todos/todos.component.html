@@ -1,3 +1,33 @@
+// todos.component.html
+//
+// This template displays a todo list with filtering and completion toggle functionality.
+// - Shows a loading message if there are no todos loaded yet.
+// - Provides a filter input to search todos.
+// - Renders a list of todos using a custom item component.
+// - Handles toggling of todo completion state.
+//
+// The component fetches todos from an API, stores them in a signal, and updates the UI reactively.
+// Filtering is handled by a custom pipe. Each todo can be toggled as completed or not.
+//
+// See todos.component.ts for logic and state management.
+
+<!--
+TodosComponent Template
+---------------------
+This template displays a todo list with filtering and completion toggle functionality.
+
+- <h3>Todo list</h3>: Section heading for the todo list.
+- @if (!todoItems().length): Shows a loading message if there are no todos loaded yet.
+- <form>: Contains a filter input bound to the searchTerm signal using ngModel for two-way binding.
+- <ul>: Displays the list of todos, filtered by the search term. Uses the @for directive for efficient rendering and tracking by item.id.
+- <app-todos-item>: Renders each todo item. The [todo] input passes the todo data, and (todoToggled) listens for toggle events to update the todo's completed state.
+
+How it works:
+- When the component loads, it fetches todos from an API and stores them in the todoItems signal.
+- The filter input updates the searchTerm signal, which is used by the filterTodos pipe to filter the displayed todos.
+- Each todo item can be toggled as completed or not, which updates the todoItems signal and triggers UI updates.
+-->
+
 <h3>Todo list</h3>
 
 <!-- Alternative version -->

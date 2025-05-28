@@ -1,3 +1,4 @@
+/* Styles for the application header */
 header {
   display: flex;
   padding-inline: 16px;
@@ -6,24 +7,33 @@ header {
   color: white;
   align-items: center;
   justify-content: space-between;
+
+  /* Navigation bar styles */
   nav {
     width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    /* Styles for the app title link */
     span {
-        cursor: pointer;
+      cursor: pointer;
 
-        &:hover {
-          color: #d3cbff;
-        }
+      /* Hover effect for the app title */
+      &:hover {
+        color: #d3cbff;
       }
+    }
 
+    /* Unordered list styles for navigation menu */
     ul {
       list-style: none;
 
+      /* List item styles for navigation links */
       li {
         cursor: pointer;
+
+        /* Hover effect for navigation links */
         &:hover{
           color: #d8d1fcf1;
         }

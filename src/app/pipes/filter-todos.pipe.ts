@@ -1,3 +1,11 @@
+// filter-todos.pipe.ts
+//
+// This custom pipe filters the list of todos based on a search term:
+// - Takes an array of todos and a search string as input.
+// - Returns only the todos whose title or description matches the search term.
+//
+// Used in todos.component.html to filter the displayed todos as the user types.
+
 import { Pipe, PipeTransform } from '@angular/core';
 import { Todo } from '../model/todo.type';
 
