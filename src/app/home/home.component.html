@@ -1,3 +1,11 @@
+// home.component.html
+//
+// Template for the HomeComponent.
+// It includes:
+// - A greeting message component with a dynamic message
+// - A counter component
+// - An input field that logs keyup events
+
 <app-greeting [message]="homeMessage()" />
 <app-counter />
 <input type="text" (keyup)="keyUpHandler($event)" placeholder="Enter text here">

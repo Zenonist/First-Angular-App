@@ -1,5 +1,9 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+// home.component.spec.ts
+//
+// Unit tests for the HomeComponent.
+// Tests if the component can be created successfully.
 
+import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { HomeComponent } from './home.component';
 
 describe('HomeComponent', () => {

@@ -1,8 +1,14 @@
+<!-- Display the current counter value -->
 <p>Counter value: {{counterValue()}}</p>
 
-
+<!-- Container for counter control buttons -->
 <div>
+  <!-- Button to increment the counter value by 1 -->
   <button (click)="increment()">Increment</button>
+
+  <!-- Button to decrement the counter value by 1 -->
   <button (click)="decrement()">Decrement</button>
+
+  <!-- Button to reset the counter value to 0 -->
   <button (click)="reset()">Reset</button>
 </div>

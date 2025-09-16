@@ -1,3 +1,14 @@
+// todos.component.ts
+//
+// This component manages the todo list state and logic:
+// - Fetches todos from the TodosService on initialization.
+// - Stores todos in a signal for reactive updates.
+// - Provides a searchTerm signal for filtering.
+// - Handles updating todo completion state when toggled.
+//
+// The template (todos.component.html) displays the UI and binds to these signals.
+// Filtering is performed using the filterTodos pipe.
+
 import { Component, inject, input, OnInit, signal } from '@angular/core';
 import { TodosService } from '../services/todos.service';
 import { Todo } from '../model/todo.type';
